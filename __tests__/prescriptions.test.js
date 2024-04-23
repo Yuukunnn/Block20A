@@ -74,5 +74,25 @@ describe("getTotalCost()", () => {
     });
   });
 });
+//because the 'getTotalCost' functions is missing input validation.
+//to solve it, we can add if statement in the getTotalCost function
 
 // TODO: Write tests for applyDiscount() and applyCoupon()
+describe("applyDiscount()", () => {
+  test("it returns 25% if Subscribed button is checked",() => {
+    expect(applyDiscount(100,true)).toBe(75);
+  })
+  test("it returns original total if Subscribed button is not checked",()=>{
+    expect(applyDiscount(100,false)).toBe(100);
+  })
+});
+
+
+describe("applyCoupon()", ()=>{
+  test("it returns $10 off if Coupon button is checked",()=>{
+    expect(applyCoupon(100,true)).toBe(90);
+  })
+  test("it returns original total if the Coupon button is not checked",()=>{
+    expect(applyCoupon(100,false)).toBe(100);
+  })
+})

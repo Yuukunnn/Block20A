@@ -79,7 +79,6 @@ describe("The document", () => {
     const calculateButton = getByRole(document, "button", {
       name: /calculate/i,
     });
-
     calculateButton.click();
 
     // TODO: Change this assertion to check the correct value.

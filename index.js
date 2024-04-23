@@ -5,8 +5,16 @@
  * @returns {number} total cost of all refills
  */
 function getTotalCost(pricePerRefill, refills) {
-  return pricePerRefill * refills;
+  if (typeof parseInt(pricePerRefill) !=="number" || typeof parseInt(refills)!=="number" || parseInt(pricePerRefill) < 0 || parseInt(refills) < 0) {
+    return 0;
+  } else {
+    return pricePerRefill * refills;
+  }
 }
+
+// function getTotalCost(pricePerRefill, refills) {
+//   return pricePerRefill * refills;
+// }
 
 /**
  * If the customer has a subscription, apply a 25% discount
